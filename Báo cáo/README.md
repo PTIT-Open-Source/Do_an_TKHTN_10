@@ -9,11 +9,11 @@
 - [Sơ đồ nguyên lý và PCB](#sơ-đồ-nguyên-lý-và-pcb)
 - [Hướng dẫn lắp ráp](#hướng-dẫn-lắp-ráp)
 - [Lập trình firmware](#lập-trình-firmware)
+- [Cài đặt môi trường](#cài-đặt-môi-trường)
 - [Cách sử dụng](#cách-sử-dụng)
 - [Kiểm thử](#kiểm-thử)
 - [Ảnh/Video demo](#ảnhvideo-demo)
 - [Đóng góp](#đóng-góp)
-- [Giấy phép](#giấy-phép)
 
 ## Giới Thiệu
 
@@ -51,8 +51,8 @@
 - Ngôn ngữ: C.
 - Công cụ: Visual Code, ESP-IDF Terminal.
 
-### Bước 1: Cài đặt môi trường
-Cài đặt Microsoft Visual Studio Code 
+##  Cài đặt môi trường
+### Cài đặt Microsoft Visual Studio Code 
 - Truy cập trang chính thức: [Visual studio Code](https://code.visualstudio.com/).
 - Nhấn nút **Download for Windows** hoặc chọn hệ điều hành khác (macOs, Linux).
 		
@@ -65,6 +65,21 @@ Cài các tiện ích cần thiết
 - **C/C++**
 - **PlatformIO**
 - **ESP-IDF** ( Nếu không cài trong Extension thì có thể cài riêng ở ngoài).
+### Cài đặt ESP-IDF thủ công
+- Truy cập trang chính thức: [ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html).
+- Chọn hệ điều hành của bạn:
+	- **Windows**
+	- **Linux**
+	- **MacOS**
+- Cài đặt ( ở đây đang cài trên Windows)
+	- Sau khi vào theo đường link trên, kéo xuống chọn download( ảnh minh họa)
+![alt](anh_1.png)
+	- Tiếp đến chọn **Windows Installer Download**
+![alt](anh_2.png)
+	- Chọn phiên bản mà bạn muốn rồi nhấn down( ở đây mình dùng ver 5.2.5)
+![alt](anh_3.png)
+
+
 		
 		
 		
