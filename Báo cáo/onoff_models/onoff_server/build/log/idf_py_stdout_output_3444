@@ -1,0 +1,545 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15620
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.5-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Apr 25 2025 00:02:37[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=30b64h (199524) map[0m
+[0;32mI (173) esp_image: segment 1: paddr=00040b8c vaddr=3ffbdb60 size=054c4h ( 21700) load[0m
+[0;32mI (181) esp_image: segment 2: paddr=00046058 vaddr=40080000 size=09fc0h ( 40896) load[0m
+[0;32mI (198) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=a2200h (664064) map[0m
+[0;32mI (425) esp_image: segment 4: paddr=000f2228 vaddr=40089fc0 size=0d0e8h ( 53480) load[0m
+[0;32mI (458) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (459) boot: Disabling RNG early entropy source...[0m
+[0;32mI (470) cpu_start: Multicore app[0m
+[0;32mI (479) cpu_start: Pro cpu start user code[0m
+[0;32mI (479) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (480) cpu_start: Application information:[0m
+[0;32mI (482) cpu_start: Project name:     onoff_server[0m
+[0;32mI (488) cpu_start: App version:      v5.2.5-dirty[0m
+[0;32mI (493) cpu_start: Compile time:     Apr 25 2025 00:01:55[0m
+[0;32mI (499) cpu_start: ELF file SHA256:  a90eeac92...[0m
+[0;32mI (505) cpu_start: ESP-IDF:          v5.2.5-dirty[0m
+[0;32mI (510) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (515) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (520) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (525) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (532) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (538) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (544) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (550) heap_init: At 3FFCAE40 len 000151C0 (84 KiB): DRAM[0m
+[0;32mI (556) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (562) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (569) heap_init: At 400970A8 len 00008F58 (35 KiB): IRAM[0m
+[0;32mI (577) spi_flash: detected chip: generic[0m
+[0;32mI (580) spi_flash: flash io: dio[0m
+[0;33mW (584) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (597) coexist: coex firmware version: 994b23e[0m
+[0;32mI (603) main_task: Started on CPU0[0m
+[0;32mI (613) main_task: Calling app_main()[0m
+[0;32mI (613) EXAMPLE: Initializing...[0m
+[0;32mI (613) gpio: GPIO[25]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (623) gpio: GPIO[26]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (633) gpio: GPIO[27]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (633) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (663) BTDM_INIT: BT controller compile version [f7360be][0m
+[0;32mI (663) BTDM_INIT: Bluetooth MAC: 10:06:1c:b5:c3:82[0m
+[0;32mI (663) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (1153) EXAMPLE: ESP_BLE_MESH_PROV_REGISTER_COMP_EVT, err_code 0[0m
+[0;32mI (1153) EXAMPLE: BLE Mesh Node initialized[0m
+[0;32mI (1153) main_task: Returned from app_main()[0m
+[0;32mI (1173) EXAMPLE: ESP_BLE_MESH_NODE_PROV_ENABLE_COMP_EVT, err_code 0[0m
+[0;32mI (1213) EXAMPLE: ESP_BLE_MESH_NODE_PROV_LINK_OPEN_EVT, bearer PB-ADV[0m
+[0;32mI (4023) EXAMPLE: ESP_BLE_MESH_NODE_PROV_COMPLETE_EVT[0m
+[0;32mI (4023) EXAMPLE: net_idx: 0x0000, addr: 0x0005[0m
+[0;32mI (4023) EXAMPLE: flags: 0x00, iv_index: 0x00000000[0m
+[0;32mI (4223) EXAMPLE: ESP_BLE_MESH_NODE_PROV_LINK_CLOSE_EVT, bearer PB-ADV[0m
+[0;33mW (4403) BLE_MESH: No matching AppKey[0m
+[0;33mW (4633) BLE_MESH: No matching AppKey[0m
+[0;32mI (4833) EXAMPLE: ESP_BLE_MESH_MODEL_OP_APP_KEY_ADD[0m
+[0;32mI (4833) EXAMPLE: net_idx 0x0000, app_idx 0x0000[0m
+[0;32mI (4833) AppKey: 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (4983) EXAMPLE: ESP_BLE_MESH_MODEL_OP_MODEL_APP_BIND[0m
+[0;32mI (4983) EXAMPLE: elem_addr 0x0005, app_idx 0x0000, cid 0xffff, mod_id 0x1000[0m
+[0;32mI (5133) EXAMPLE: ESP_BLE_MESH_MODEL_OP_MODEL_APP_BIND[0m
+[0;32mI (5133) EXAMPLE: elem_addr 0x0006, app_idx 0x0000, cid 0xffff, mod_id 0x1000[0m
+[0;32mI (5213) EXAMPLE: ESP_BLE_MESH_MODEL_OP_MODEL_APP_BIND[0m
+[0;32mI (5223) EXAMPLE: elem_addr 0x0007, app_idx 0x0000, cid 0xffff, mod_id 0x1000[0m
+[0;32mI (7903) EXAMPLE: GEN_SERVER_CB: model addr=0x0005, opcode=0x8203[0m
+[0;32mI (7903) EXAMPLE: event 0x00, opcode 0x8203, src 0x0001, dst 0x0005[0m
+[0;32mI (7903) EXAMPLE: ESP_BLE_MESH_GENERIC_SERVER_STATE_CHANGE_EVT[0m
+[0;32mI (7913) EXAMPLE: Received message from 0x0001 to 0x0005 with TTL 5[0m
+[0;32mI (7923) EXAMPLE: onoff 0x01[0m
+[0;32mI (7923) EXAMPLE: model addr = 0x0005, primary = 0x0005, index = 0[0m
+[0;32mI (7933) EXAMPLE: Received msg for addr 0x0005[0m
+[0;32mI (7933) EXAMPLE: LED[0] (GPIO 25) set to ON[0m
+[0;32mI (8233) EXAMPLE: GEN_SERVER_CB: model addr=0x0006, opcode=0x8203[0m
+[0;32mI (8233) EXAMPLE: event 0x02, opcode 0x8203, src 0x0001, dst 0x0006[0m
+[0;32mI (8233) EXAMPLE: ESP_BLE_MESH_GENERIC_SERVER_RECV_SET_MSG_EVT[0m
+[0;32mI (8243) EXAMPLE: onoff 0x01, tid 0x04[0m
+[0;32mI (8243) EXAMPLE: model addr = 0x0006, primary = 0x0005, index = 1[0m
+[0;32mI (8253) EXAMPLE: Received msg for addr 0x0006[0m
+[0;32mI (8263) EXAMPLE: LED[1] (GPIO 26) set to ON[0m
+[0;32mI (8513) EXAMPLE: GEN_SERVER_CB: model addr=0x0007, opcode=0x8203[0m
+[0;32mI (8513) EXAMPLE: event 0x02, opcode 0x8203, src 0x0001, dst 0x0007[0m
+[0;32mI (8513) EXAMPLE: ESP_BLE_MESH_GENERIC_SERVER_RECV_SET_MSG_EVT[0m
+[0;32mI (8523) EXAMPLE: onoff 0x01, tid 0x05[0m
+[0;32mI (8533) EXAMPLE: model addr = 0x0007, primary = 0x0005, index = 2[0m
+[0;32mI (8533) EXAMPLE: Received msg for addr 0x0007[0m
+[0;32mI (8543) EXAMPLE: LED[2] (GPIO 27) set to ON[0m
+[0;32mI (26603) EXAMPLE: GEN_SERVER_CB: model addr=0x0005, opcode=0x8203[0m
+[0;32mI (26603) EXAMPLE: event 0x00, opcode 0x8203, src 0x0001, dst 0x0005[0m
+[0;32mI (26603) EXAMPLE: ESP_BLE_MESH_GENERIC_SERVER_STATE_CHANGE_EVT[0m
+[0;32mI (26613) EXAMPLE: Received message from 0x0001 to 0x0005 with TTL 5[0m
+[0;32mI (26623) EXAMPLE: onoff 0x01[0m
+[0;32mI (26623) EXAMPLE: model addr = 0x0005, primary = 0x0005, index = 0[0m
+[0;32mI (26633) EXAMPLE: Received msg for addr 0x0005[0m
+[0;33mW (26633) BOARD: led buzzer is already on[0m
+[0;32mI (26643) EXAMPLE: LED[0] (GPIO 25) set to ON[0m
+[0;32mI (26943) EXAMPLE: GEN_SERVER_CB: model addr=0x0006, opcode=0x8203[0m
+[0;32mI (26943) EXAMPLE: event 0x02, opcode 0x8203, src 0x0001, dst 0x0006[0m
+[0;32mI (26943) EXAMPLE: ESP_BLE_MESH_GENERIC_SERVER_RECV_SET_MSG_EVT[0m
+[0;32mI (26953) EXAMPLE: onoff 0x01, tid 0x07[0m
+[0;32mI (26953) EXAMPLE: model addr = 0x0006, primary = 0x0005, index = 1[0m
+[0;32mI (26963) EXAMPLE: Received msg for addr 0x0006[0m
+[0;33mW (26973) BOARD: led red is already on[0m
+[0;32mI (26973) EXAMPLE: LED[1] (GPIO 26) set to ON[0m
+[0;32mI (27213) EXAMPLE: GEN_SERVER_CB: model addr=0x0007, opcode=0x8203[0m
+[0;32mI (27213) EXAMPLE: event 0x02, opcode 0x8203, src 0x0001, dst 0x0007[0m
+[0;32mI (27213) EXAMPLE: ESP_BLE_MESH_GENERIC_SERVER_RECV_SET_MSG_EVT[0m
+[0;32mI (27223) EXAMPLE: onoff 0x01, tid 0x08[0m
+[0;32mI (27233) EXAMPLE: model addr = 0x0007, primary = 0x0005, index = 2[0m
+[0;32mI (27233) EXAMPLE: Received msg for addr 0x0007[0m
+[0;33mW (27243) BOARD: led blue is already on[0m
+[0;32mI (27243) EXAMPLE: LED[2] (GPIO 27) set to ON[0m
+[0;32mI (30373) EXAMPLE: GEN_SERVER_CB: model addr=0x0005, opcode=0x8203[0m
+[0;32mI (30373) EXAMPLE: event 0x00, opcode 0x8203, src 0x0001, dst 0x0005[0m
+[0;32mI (30373) EXAMPLE: ESP_BLE_MESH_GENERIC_SERVER_STATE_CHANGE_EVT[0m
+[0;32mI (30383) EXAMPLE: Received message from 0x0001 to 0x0005 with TTL 5[0m
+[0;32mI (30383) EXAMPLE: onoff 0x01[0m
+[0;32mI (30393) EXAMPLE: model addr = 0x0005, primary = 0x0005, index = 0[0m
+[0;32mI (30403) EXAMPLE: Received msg for addr 0x0005[0m
+[0;33mW (30403) BOARD: led buzzer is already on[0m
+[0;32mI (30413) EXAMPLE: LED[0] (GPIO 25) set to ON[0m
+[0;32mI (30683) EXAMPLE: GEN_SERVER_CB: model addr=0x0006, opcode=0x8203[0m
+[0;32mI (30683) EXAMPLE: event 0x02, opcode 0x8203, src 0x0001, dst 0x0006[0m
+[0;32mI (30683) EXAMPLE: ESP_BLE_MESH_GENERIC_SERVER_RECV_SET_MSG_EVT[0m
+[0;32mI (30693) EXAMPLE: onoff 0x01, tid 0x0a[0m
+[0;32mI (30693) EXAMPLE: model addr = 0x0006, primary = 0x0005, index = 1[0m
+[0;32mI (30703) EXAMPLE: Received msg for addr 0x0006[0m
+[0;33mW (30713) BOARD: led red is already on[0m
+[0;32mI (30713) EXAMPLE: LED[1] (GPIO 26) set to ON[0m
+[0;32mI (31023) EXAMPLE: GEN_SERVER_CB: model addr=0x0007, opcode=0x8203[0m
+[0;32mI (31023) EXAMPLE: event 0x02, opcode 0x8203, src 0x0001, dst 0x0007[0m
+[0;32mI (31023) EXAMPLE: ESP_BLE_MESH_GENERIC_SERVER_RECV_SET_MSG_EVT[0m
+[0;32mI (31033) EXAMPLE: onoff 0x01, tid 0x0b[0m
+[0;32mI (31033) EXAMPLE: model addr = 0x0007, primary = 0x0005, index = 2[0m
+[0;32mI (31043) EXAMPLE: Received msg for addr 0x0007[0m
+[0;33mW (31053) BOARD: led blue is already on[0m
+[0;32mI (31053) EXAMPLE: LED[2] (GPIO 27) set to ON[0m
+[0;32mI (59303) EXAMPLE: GEN_SERVER_CB: model addr=0x0006, opcode=0x8203[0m
+[0;32mI (59303) EXAMPLE: event 0x02, opcode 0x8203, src 0x0001, dst 0x0006[0m
+[0;32mI (59303) EXAMPLE: ESP_BLE_MESH_GENERIC_SERVER_RECV_SET_MSG_EVT[0m
+[0;32mI (59313) EXAMPLE: onoff 0x01, tid 0x0d[0m
+[0;32mI (59323) EXAMPLE: model addr = 0x0006, primary = 0x0005, index = 1[0m
+[0;32mI (59323) EXAMPLE: Received msg for addr 0x0006[0m
+[0;33mW (59333) BOARD: led red is already on[0m
+[0;32mI (59333) EXAMPLE: LED[1] (GPIO 26) set to ON[0m
+[0;32mI (59633) EXAMPLE: GEN_SERVER_CB: model addr=0x0007, opcode=0x8203[0m
+[0;32mI (59633) EXAMPLE: event 0x02, opcode 0x8203, src 0x0001, dst 0x0007[0m
+[0;32mI (59633) EXAMPLE: ESP_BLE_MESH_GENERIC_SERVER_RECV_SET_MSG_EVT[0m
+[0;32mI (59643) EXAMPLE: onoff 0x01, tid 0x0e[0m
+[0;32mI (59643) EXAMPLE: model addr = 0x0007, primary = 0x0005, index = 2[0m
+[0;32mI (59653) EXAMPLE: Received msg for addr 0x0007[0m
+[0;33mW (59663) BOARD: led blue is already on[0m
+[0;32mI (59663) EXAMPLE: LED[2] (GPIO 27) set to ON[0m
+[0;32mI (64663) EXAMPLE: GEN_SERVER_CB: model addr=0x0005, opcode=0x8203[0m
+[0;32mI (64663) EXAMPLE: event 0x00, opcode 0x8203, src 0x0001, dst 0x0005[0m
+[0;32mI (64663) EXAMPLE: ESP_BLE_MESH_GENERIC_SERVER_STATE_CHANGE_EVT[0m
+[0;32mI (64673) EXAMPLE: Received message from 0x0001 to 0x0005 with TTL 5[0m
+[0;32mI (64683) EXAMPLE: onoff 0x01[0m
+[0;32mI (64683) EXAMPLE: model addr = 0x0005, primary = 0x0005, index = 0[0m
+[0;32mI (64693) EXAMPLE: Received msg for addr 0x0005[0m
+[0;33mW (64693) BOARD: led buzzer is already on[0m
+[0;32mI (64703) EXAMPLE: LED[0] (GPIO 25) set to ON[0m
+[0;32mI (65263) EXAMPLE: GEN_SERVER_CB: model addr=0x0007, opcode=0x8203[0m
+[0;32mI (65263) EXAMPLE: event 0x02, opcode 0x8203, src 0x0001, dst 0x0007[0m
+[0;32mI (65263) EXAMPLE: ESP_BLE_MESH_GENERIC_SERVER_RECV_SET_MSG_EVT[0m
+[0;32mI (65273) EXAMPLE: onoff 0x01, tid 0x14[0m
+[0;32mI (65273) EXAMPLE: model addr = 0x0007, primary = 0x0005, index = 2[0m
+[0;32mI (65283) EXAMPLE: Received msg for addr 0x0007[0m
+[0;33mW (65293) BOARD: led blue is already on[0m
+[0;32mI (65293) EXAMPLE: LED[2] (GPIO 27) set to ON[0m
+[0;32mI (67373) EXAMPLE: GEN_SERVER_CB: model addr=0x0005, opcode=0x8203[0m
+[0;32mI (67373) EXAMPLE: event 0x00, opcode 0x8203, src 0x0001, dst 0x0005[0m
+[0;32mI (67383) EXAMPLE: ESP_BLE_MESH_GENERIC_SERVER_STATE_CHANGE_EVT[0m
+[0;32mI (67383) EXAMPLE: Received message from 0x0001 to 0x0005 with TTL 5[0m
+[0;32mI (67393) EXAMPLE: onoff 0x01[0m
+[0;32mI (67393) EXAMPLE: model addr = 0x0005, primary = 0x0005, index = 0[0m
+[0;32mI (67403) EXAMPLE: Received msg for addr 0x0005[0m
+[0;33mW (67413) BOARD: led buzzer is already on[0m
+[0;32mI (67413) EXAMPLE: LED[0] (GPIO 25) set to ON[0m
+[0;32mI (67703) EXAMPLE: GEN_SERVER_CB: model addr=0x0006, opcode=0x8203[0m
+[0;32mI (67703) EXAMPLE: event 0x02, opcode 0x8203, src 0x0001, dst 0x0006[0m
+[0;32mI (67703) EXAMPLE: ESP_BLE_MESH_GENERIC_SERVER_RECV_SET_MSG_EVT[0m
+[0;32mI (67703) EXAMPLE: onoff 0x01, tid 0x16[0m
+[0;32mI (67713) EXAMPLE: model addr = 0x0006, primary = 0x0005, index = 1[0m
+[0;32mI (67723) EXAMPLE: Received msg for addr 0x0006[0m
+[0;33mW (67723) BOARD: led red is already on[0m
+[0;32mI (67733) EXAMPLE: LED[1] (GPIO 26) set to ON[0m
+[0;32mI (67933) EXAMPLE: GEN_SERVER_CB: model addr=0x0007, opcode=0x8203[0m
+[0;32mI (67933) EXAMPLE: event 0x02, opcode 0x8203, src 0x0001, dst 0x0007[0m
+[0;32mI (67933) EXAMPLE: ESP_BLE_MESH_GENERIC_SERVER_RECV_SET_MSG_EVT[0m
+[0;32mI (67943) EXAMPLE: onoff 0x01, tid 0x17[0m
+[0;32mI (67953) EXAMPLE: model addr = 0x0007, primary = 0x0005, index = 2[0m
+[0;32mI (67953) EXAMPLE: Received msg for addr 0x0007[0m
+[0;33mW (67963) BOARD: led blue is already on[0m
+[0;32mI (67963) EXAMPLE: LED[2] (GPIO 27) set to ON[0m
+[0;32mI (118743) EXAMPLE: GEN_SERVER_CB: model addr=0x0005, opcode=0x8203[0m
+[0;32mI (118743) EXAMPLE: event 0x00, opcode 0x8203, src 0x0001, dst 0x0005[0m
+[0;32mI (118743) EXAMPLE: ESP_BLE_MESH_GENERIC_SERVER_STATE_CHANGE_EVT[0m
+[0;32mI (118753) EXAMPLE: Received message from 0x0001 to 0x0005 with TTL 4[0m
+[0;32mI (118763) EXAMPLE: onoff 0x01[0m
+[0;32mI (118763) EXAMPLE: model addr = 0x0005, primary = 0x0005, index = 0[0m
+[0;32mI (118773) EXAMPLE: Received msg for addr 0x0005[0m
+[0;33mW (118773) BOARD: led buzzer is already on[0m
+[0;32mI (118783) EXAMPLE: LED[0] (GPIO 25) set to ON[0m
+[0;32mI (119103) EXAMPLE: GEN_SERVER_CB: model addr=0x0006, opcode=0x8203[0m
+[0;32mI (119103) EXAMPLE: event 0x02, opcode 0x8203, src 0x0001, dst 0x0006[0m
+[0;32mI (119103) EXAMPLE: ESP_BLE_MESH_GENERIC_SERVER_RECV_SET_MSG_EVT[0m
+[0;32mI (119113) EXAMPLE: onoff 0x01, tid 0x19[0m
+[0;32mI (119113) EXAMPLE: model addr = 0x0006, primary = 0x0005, index = 1[0m
+[0;32mI (119123) EXAMPLE: Received msg for addr 0x0006[0m
+[0;33mW (119123) BOARD: led red is already on[0m
+[0;32mI (119133) EXAMPLE: LED[1] (GPIO 26) set to ON[0m
+[0;32mI (119513) EXAMPLE: GEN_SERVER_CB: model addr=0x0007, opcode=0x8203[0m
+[0;32mI (119513) EXAMPLE: event 0x02, opcode 0x8203, src 0x0001, dst 0x0007[0m
+[0;32mI (119513) EXAMPLE: ESP_BLE_MESH_GENERIC_SERVER_RECV_SET_MSG_EVT[0m
+[0;32mI (119523) EXAMPLE: onoff 0x01, tid 0x1a[0m
+[0;32mI (119523) EXAMPLE: model addr = 0x0007, primary = 0x0005, index = 2[0m
+[0;32mI (119533) EXAMPLE: Received msg for addr 0x0007[0m
+[0;33mW (119543) BOARD: led blue is already on[0m
+[0;32mI (119543) EXAMPLE: LED[2] (GPIO 27) set to ON[0m
+[0;32mI (120343) EXAMPLE: GEN_SERVER_CB: model addr=0x0005, opcode=0x8203[0m
+[0;32mI (120343) EXAMPLE: event 0x00, opcode 0x8203, src 0x0001, dst 0x0005[0m
+[0;32mI (120343) EXAMPLE: ESP_BLE_MESH_GENERIC_SERVER_STATE_CHANGE_EVT[0m
+[0;32mI (120353) EXAMPLE: Received message from 0x0001 to 0x0005 with TTL 4[0m
+[0;32mI (120363) EXAMPLE: onoff 0x01[0m
+[0;32mI (120363) EXAMPLE: model addr = 0x0005, primary = 0x0005, index = 0[0m
+[0;32mI (120373) EXAMPLE: Received msg for addr 0x0005[0m
+[0;33mW (120373) BOARD: led buzzer is already on[0m
+[0;32mI (120383) EXAMPLE: LED[0] (GPIO 25) set to ON[0m
+[0;32mI (120703) EXAMPLE: GEN_SERVER_CB: model addr=0x0006, opcode=0x8203[0m
+[0;32mI (120703) EXAMPLE: event 0x02, opcode 0x8203, src 0x0001, dst 0x0006[0m
+[0;32mI (120703) EXAMPLE: ESP_BLE_MESH_GENERIC_SERVER_RECV_SET_MSG_EVT[0m
+[0;32mI (120713) EXAMPLE: onoff 0x01, tid 0x1c[0m
+[0;32mI (120713) EXAMPLE: model addr = 0x0006, primary = 0x0005, index = 1[0m
+[0;32mI (120723) EXAMPLE: Received msg for addr 0x0006[0m
+[0;33mW (120733) BOARD: led red is already on[0m
+[0;32mI (120733) EXAMPLE: LED[1] (GPIO 26) set to ON[0m
+[0;32mI (120943) EXAMPLE: GEN_SERVER_CB: model addr=0x0007, opcode=0x8203[0m
+[0;32mI (120943) EXAMPLE: event 0x02, opcode 0x8203, src 0x0001, dst 0x0007[0m
+[0;32mI (120943) EXAMPLE: ESP_BLE_MESH_GENERIC_SERVER_RECV_SET_MSG_EVT[0m
+[0;32mI (120953) EXAMPLE: onoff 0x01, tid 0x1d[0m
+[0;32mI (120953) EXAMPLE: model addr = 0x0007, primary = 0x0005, index = 2[0m
+[0;32mI (120963) EXAMPLE: Received msg for addr 0x0007[0m
+[0;33mW (120973) BOARD: led blue is already on[0m
+[0;32mI (120973) EXAMPLE: LED[2] (GPIO 27) set to ON[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15620
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.5-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Apr 25 2025 00:02:37[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=30b64h (199524) map[0m
+[0;32mI (173) esp_image: segment 1: paddr=00040b8c vaddr=3ffbdb60 size=054c4h ( 21700) load[0m
+[0;32mI (181) esp_image: segment 2: paddr=00046058 vaddr=40080000 size=09fc0h ( 40896) load[0m
+[0;32mI (198) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=a2200h (664064) map[0m
+[0;32mI (425) esp_image: segment 4: paddr=000f2228 vaddr=40089fc0 size=0d0e8h ( 53480) load[0m
+[0;32mI (458) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (459) boot: Disabling RNG early entropy source...[0m
+[0;32mI (470) cpu_start: Multicore app[0m
+[0;32mI (479) cpu_start: Pro cpu start user code[0m
+[0;32mI (479) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (480) cpu_start: Application information:[0m
+[0;32mI (482) cpu_start: Project name:     onoff_server[0m
+[0;32mI (488) cpu_start: App version:      v5.2.5-dirty[0m
+[0;32mI (493) cpu_start: Compile time:     Apr 25 2025 00:01:55[0m
+[0;32mI (499) cpu_start: ELF file SHA256:  a90eeac92...[0m
+[0;32mI (505) cpu_start: ESP-IDF:          v5.2.5-dirty[0m
+[0;32mI (510) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (515) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (520) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (525) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (532) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (538) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (544) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (550) heap_init: At 3FFCAE40 len 000151C0 (84 KiB): DRAM[0m
+[0;32mI (556) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (562) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (569) heap_init: At 400970A8 len 00008F58 (35 KiB): IRAM[0m
+[0;32mI (577) spi_flash: detected chip: generic[0m
+[0;32mI (580) spi_flash: flash io: dio[0m
+[0;33mW (584) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (597) coexist: coex firmware version: 994b23e[0m
+[0;32mI (603) main_task: Started on CPU0[0m
+[0;32mI (613) main_task: Calling app_main()[0m
+[0;32mI (613) EXAMPLE: Initializing...[0m
+[0;32mI (613) gpio: GPIO[25]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (623) gpio: GPIO[26]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (633) gpio: GPIO[27]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (633) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (663) BTDM_INIT: BT controller compile version [f7360be][0m
+[0;32mI (663) BTDM_INIT: Bluetooth MAC: 10:06:1c:b5:c3:82[0m
+[0;32mI (663) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (1153) EXAMPLE: ESP_BLE_MESH_PROV_REGISTER_COMP_EVT, err_code 0[0m
+[0;32mI (1153) EXAMPLE: BLE Mesh Node initialized[0m
+[0;32mI (1153) main_task: Returned from app_main()[0m
+[0;32mI (1173) EXAMPLE: ESP_BLE_MESH_NODE_PROV_ENABLE_COMP_EVT, err_code 0[0m
+[0;32mI (1243) EXAMPLE: ESP_BLE_MESH_NODE_PROV_LINK_OPEN_EVT, bearer PB-ADV[0m
+[0;32mI (4203) EXAMPLE: ESP_BLE_MESH_NODE_PROV_COMPLETE_EVT[0m
+[0;32mI (4203) EXAMPLE: net_idx: 0x0000, addr: 0x0005[0m
+[0;32mI (4203) EXAMPLE: flags: 0x00, iv_index: 0x00000000[0m
+[0;32mI (4463) EXAMPLE: ESP_BLE_MESH_NODE_PROV_LINK_CLOSE_EVT, bearer PB-ADV[0m
+[0;32mI (4963) EXAMPLE: ESP_BLE_MESH_MODEL_OP_APP_KEY_ADD[0m
+[0;32mI (4963) EXAMPLE: net_idx 0x0000, app_idx 0x0000[0m
+[0;32mI (4963) AppKey: 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (5133) EXAMPLE: ESP_BLE_MESH_MODEL_OP_MODEL_APP_BIND[0m
+[0;32mI (5133) EXAMPLE: elem_addr 0x0005, app_idx 0x0000, cid 0xffff, mod_id 0x1000[0m
+[0;32mI (5333) EXAMPLE: ESP_BLE_MESH_MODEL_OP_MODEL_APP_BIND[0m
+[0;32mI (5333) EXAMPLE: elem_addr 0x0006, app_idx 0x0000, cid 0xffff, mod_id 0x1000[0m
+[0;32mI (5433) EXAMPLE: ESP_BLE_MESH_MODEL_OP_MODEL_APP_BIND[0m
+[0;32mI (5433) EXAMPLE: elem_addr 0x0007, app_idx 0x0000, cid 0xffff, mod_id 0x1000[0m
+[0;32mI (23433) EXAMPLE: GEN_SERVER_CB: model addr=0x0005, opcode=0x8203[0m
+[0;32mI (23433) EXAMPLE: event 0x00, opcode 0x8203, src 0x0001, dst 0x0005[0m
+[0;32mI (23443) EXAMPLE: ESP_BLE_MESH_GENERIC_SERVER_STATE_CHANGE_EVT[0m
+[0;32mI (23443) EXAMPLE: Received message from 0x0001 to 0x0005 with TTL 5[0m
+[0;32mI (23453) EXAMPLE: onoff 0x01[0m
+[0;32mI (23453) EXAMPLE: model addr = 0x0005, primary = 0x0005, index = 0[0m
+[0;32mI (23463) EXAMPLE: Received msg for addr 0x0005[0m
+[0;32mI (23473) EXAMPLE: LED[0] (GPIO 25) set to ON[0m
+[0;32mI (23793) EXAMPLE: GEN_SERVER_CB: model addr=0x0006, opcode=0x8203[0m
+[0;32mI (23793) EXAMPLE: event 0x02, opcode 0x8203, src 0x0001, dst 0x0006[0m
+[0;32mI (23793) EXAMPLE: ESP_BLE_MESH_GENERIC_SERVER_RECV_SET_MSG_EVT[0m
+[0;32mI (23803) EXAMPLE: onoff 0x01, tid 0x1f[0m
+[0;32mI (23803) EXAMPLE: model addr = 0x0006, primary = 0x0005, index = 1[0m
+[0;32mI (23813) EXAMPLE: Received msg for addr 0x0006[0m
+[0;32mI (23813) EXAMPLE: LED[1] (GPIO 26) set to ON[0m
+[0;32mI (23983) EXAMPLE: GEN_SERVER_CB: model addr=0x0007, opcode=0x8203[0m
+[0;32mI (23983) EXAMPLE: event 0x02, opcode 0x8203, src 0x0001, dst 0x0007[0m
+[0;32mI (23983) EXAMPLE: ESP_BLE_MESH_GENERIC_SERVER_RECV_SET_MSG_EVT[0m
+[0;32mI (23993) EXAMPLE: onoff 0x01, tid 0x20[0m
+[0;32mI (23993) EXAMPLE: model addr = 0x0007, primary = 0x0005, index = 2[0m
+[0;32mI (24003) EXAMPLE: Received msg for addr 0x0007[0m
+[0;32mI (24003) EXAMPLE: LED[2] (GPIO 27) set to ON[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15620
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.5-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Apr 25 2025 00:02:37[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=30b64h (199524) map[0m
+[0;32mI (173) esp_image: segment 1: paddr=00040b8c vaddr=3ffbdb60 size=054c4h ( 21700) load[0m
+[0;32mI (181) esp_image: segment 2: paddr=00046058 vaddr=40080000 size=09fc0h ( 40896) load[0m
+[0;32mI (198) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=a2200h (664064) map[0m
+[0;32mI (425) esp_image: segment 4: paddr=000f2228 vaddr=40089fc0 size=0d0e8h ( 53480) load[0m
+[0;32mI (459) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (459) boot: Disabling RNG early entropy source...[0m
+[0;32mI (470) cpu_start: Multicore app[0m
+[0;32mI (479) cpu_start: Pro cpu start user code[0m
+[0;32mI (479) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (479) cpu_start: Application information:[0m
+[0;32mI (482) cpu_start: Project name:     onoff_server[0m
+[0;32mI (488) cpu_start: App version:      v5.2.5-dirty[0m
+[0;32mI (493) cpu_start: Compile time:     Apr 25 2025 00:01:55[0m
+[0;32mI (499) cpu_start: ELF file SHA256:  a90eeac92...[0m
+[0;32mI (505) cpu_start: ESP-IDF:          v5.2.5-dirty[0m
+[0;32mI (510) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (515) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (520) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (525) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (532) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (538) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (544) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (550) heap_init: At 3FFCAE40 len 000151C0 (84 KiB): DRAM[0m
+[0;32mI (556) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (562) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (569) heap_init: At 400970A8 len 00008F58 (35 KiB): IRAM[0m
+[0;32mI (577) spi_flash: detected chip: generic[0m
+[0;32mI (580) spi_flash: flash io: dio[0m
+[0;33mW (584) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (597) coexist: coex firmware version: 994b23e[0m
+[0;32mI (603) main_task: Started on CPU0[0m
+[0;32mI (613) main_task: Calling app_main()[0m
+[0;32mI (613) EXAMPLE: Initializing...[0m
+[0;32mI (613) gpio: GPIO[25]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (623) gpio: GPIO[26]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (633) gpio: GPIO[27]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (633) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (663) BTDM_INIT: BT controller compile version [f7360be][0m
+[0;32mI (663) BTDM_INIT: Bluetooth MAC: 10:06:1c:b5:c3:82[0m
+[0;32mI (663) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (1153) EXAMPLE: ESP_BLE_MESH_PROV_REGISTER_COMP_EVT, err_code 0[0m
+[0;32mI (1153) EXAMPLE: BLE Mesh Node initialized[0m
+[0;32mI (1153) main_task: Returned from app_main()[0m
+[0;32mI (1173) EXAMPLE: ESP_BLE_MESH_NODE_PROV_ENABLE_COMP_EVT, err_code 0[0m
+[0;32mI (60123) EXAMPLE: ESP_BLE_MESH_NODE_PROV_LINK_OPEN_EVT, bearer PB-GATT[0m
+[0;32mI (60663) EXAMPLE: ESP_BLE_MESH_NODE_PROV_LINK_CLOSE_EVT, bearer PB-GATT[0m
+[0;32mI (60663) EXAMPLE: ESP_BLE_MESH_NODE_PROV_COMPLETE_EVT[0m
+[0;32mI (60673) EXAMPLE: net_idx: 0x0000, addr: 0x0005[0m
+[0;32mI (60673) EXAMPLE: flags: 0x00, iv_index: 0x00000000[0m
+[0;33mW (60783) BT_HCI: hcif disc complete: hdl 0x0, rsn 0x13[0m
+[0;32mI (61233) EXAMPLE: ESP_BLE_MESH_MODEL_OP_APP_KEY_ADD[0m
+[0;32mI (61233) EXAMPLE: net_idx 0x0000, app_idx 0x0000[0m
+[0;32mI (61233) AppKey: 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (61433) EXAMPLE: ESP_BLE_MESH_MODEL_OP_MODEL_APP_BIND[0m
+[0;32mI (61433) EXAMPLE: elem_addr 0x0005, app_idx 0x0000, cid 0xffff, mod_id 0x1000[0m
+[0;32mI (61503) EXAMPLE: ESP_BLE_MESH_MODEL_OP_MODEL_APP_BIND[0m
+[0;32mI (61503) EXAMPLE: elem_addr 0x0006, app_idx 0x0000, cid 0xffff, mod_id 0x1000[0m
+[0;32mI (61593) EXAMPLE: ESP_BLE_MESH_MODEL_OP_MODEL_APP_BIND[0m
+[0;32mI (61593) EXAMPLE: elem_addr 0x0007, app_idx 0x0000, cid 0xffff, mod_id 0x1000[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15620
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.5-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Apr 25 2025 00:02:37[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=30b64h (199524) map[0m
+[0;32mI (173) esp_image: segment 1: paddr=00040b8c vaddr=3ffbdb60 size=054c4h ( 21700) load[0m
+[0;32mI (181) esp_image: segment 2: paddr=00046058 vaddr=40080000 size=09fc0h ( 40896) load[0m
+[0;32mI (198) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=a2200h (664064) map[0m
+[0;32mI (425) esp_image: segment 4: paddr=000f2228 vaddr=40089fc0 size=0d0e8h ( 53480) load[0m
+[0;32mI (459) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (459) boot: Disabling RNG early entropy source...[0m
+[0;32mI (470) cpu_start: Multicore app[0m
+[0;32mI (479) cpu_start: Pro cpu start user code[0m
+[0;32mI (479) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (480) cpu_start: Application information:[0m
+[0;32mI (482) cpu_start: Project name:     onoff_server[0m
+[0;32mI (488) cpu_start: App version:      v5.2.5-dirty[0m
+[0;32mI (493) cpu_start: Compile time:     Apr 25 2025 00:01:55[0m
+[0;32mI (499) cpu_start: ELF file SHA256:  a90eeac92...[0m
+[0;32mI (505) cpu_start: ESP-IDF:          v5.2.5-dirty[0m
+[0;32mI (510) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (515) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (520) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (525) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (532) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (538) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (544) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (550) heap_init: At 3FFCAE40 len 000151C0 (84 KiB): DRAM[0m
+[0;32mI (556) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (562) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (569) heap_init: At 400970A8 len 00008F58 (35 KiB): IRAM[0m
+[0;32mI (577) spi_flash: detected chip: generic[0m
+[0;32mI (580) spi_flash: flash io: dio[0m
+[0;33mW (584) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (597) coexist: coex firmware version: 994b23e[0m
+[0;32mI (603) main_task: Started on CPU0[0m
+[0;32mI (613) main_task: Calling app_main()[0m
+[0;32mI (613) EXAMPLE: Initializing...[0m
+[0;32mI (613) gpio: GPIO[25]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (623) gpio: GPIO[26]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (633) gpio: GPIO[27]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (633) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (663) BTDM_INIT: BT controller compile version [f7360be][0m
+[0;32mI (663) BTDM_INIT: Bluetooth MAC: 10:06:1c:b5:c3:82[0m
+[0;32mI (663) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (1153) EXAMPLE: ESP_BLE_MESH_PROV_REGISTER_COMP_EVT, err_code 0[0m
+[0;32mI (1153) EXAMPLE: BLE Mesh Node initialized[0m
+[0;32mI (1153) main_task: Returned from app_main()[0m
+[0;32mI (1173) EXAMPLE: ESP_BLE_MESH_NODE_PROV_ENABLE_COMP_EVT, err_code 0[0m
+[0;32mI (1223) EXAMPLE: ESP_BLE_MESH_NODE_PROV_LINK_OPEN_EVT, bearer PB-ADV[0m
+[0;32mI (3313) EXAMPLE: ESP_BLE_MESH_NODE_PROV_COMPLETE_EVT[0m
+[0;32mI (3323) EXAMPLE: net_idx: 0x0000, addr: 0x0005[0m
+[0;32mI (3323) EXAMPLE: flags: 0x00, iv_index: 0x00000000[0m
+[0;32mI (3573) EXAMPLE: ESP_BLE_MESH_NODE_PROV_LINK_CLOSE_EVT, bearer PB-ADV[0m
+[0;32mI (4113) EXAMPLE: ESP_BLE_MESH_MODEL_OP_APP_KEY_ADD[0m
+[0;32mI (4113) EXAMPLE: net_idx 0x0000, app_idx 0x0000[0m
+[0;32mI (4113) AppKey: 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (4273) EXAMPLE: ESP_BLE_MESH_MODEL_OP_MODEL_APP_BIND[0m
+[0;32mI (4273) EXAMPLE: elem_addr 0x0005, app_idx 0x0000, cid 0xffff, mod_id 0x1000[0m
+[0;32mI (4403) EXAMPLE: ESP_BLE_MESH_MODEL_OP_MODEL_APP_BIND[0m
+[0;32mI (4403) EXAMPLE: elem_addr 0x0006, app_idx 0x0000, cid 0xffff, mod_id 0x1000[0m
+[0;32mI (4473) EXAMPLE: ESP_BLE_MESH_MODEL_OP_MODEL_APP_BIND[0m
+[0;32mI (4473) EXAMPLE: elem_addr 0x0007, app_idx 0x0000, cid 0xffff, mod_id 0x1000[0m

@@ -1,0 +1,2 @@
+source D:/Espressif/frameworks/esp-idf-v5.2.5/examples/bluetooth/esp_ble_mesh/onoff_models/onoff_client/build/gdbinit/symbols
+source D:/Espressif/frameworks/esp-idf-v5.2.5/examples/bluetooth/esp_ble_mesh/onoff_models/onoff_client/build/gdbinit/connect

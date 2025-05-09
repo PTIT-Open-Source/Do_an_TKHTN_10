@@ -1,0 +1,467 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15620
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.5-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Apr 28 2025 23:05:19[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=32c44h (207940) map[0m
+[0;32mI (176) esp_image: segment 1: paddr=00042c6c vaddr=3ffbdb60 size=05264h ( 21092) load[0m
+[0;32mI (184) esp_image: segment 2: paddr=00047ed8 vaddr=40080000 size=08140h ( 33088) load[0m
+[0;32mI (197) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=a9d9ch (695708) map[0m
+[0;32mI (436) esp_image: segment 4: paddr=000f9dc4 vaddr=40088140 size=0ef68h ( 61288) load[0m
+[0;32mI (472) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (472) boot: Disabling RNG early entropy source...[0m
+[0;32mI (484) cpu_start: Multicore app[0m
+[0;32mI (493) cpu_start: Pro cpu start user code[0m
+[0;32mI (493) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (493) cpu_start: Application information:[0m
+[0;32mI (496) cpu_start: Project name:     provisioner[0m
+[0;32mI (501) cpu_start: App version:      v5.2.5-dirty[0m
+[0;32mI (507) cpu_start: Compile time:     Apr 28 2025 23:02:48[0m
+[0;32mI (513) cpu_start: ELF file SHA256:  9e26bc6d6...[0m
+[0;32mI (518) cpu_start: ESP-IDF:          v5.2.5-dirty[0m
+[0;32mI (523) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (528) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (533) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (538) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (545) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (551) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (557) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (563) heap_init: At 3FFCB2E8 len 00014D18 (83 KiB): DRAM[0m
+[0;32mI (569) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (576) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (582) heap_init: At 400970A8 len 00008F58 (35 KiB): IRAM[0m
+[0;32mI (590) spi_flash: detected chip: generic[0m
+[0;32mI (593) spi_flash: flash io: dio[0m
+[0;33mW (597) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (611) coexist: coex firmware version: 994b23e[0m
+[0;32mI (616) main_task: Started on CPU0[0m
+[0;32mI (626) main_task: Calling app_main()[0m
+[0;32mI (626) EXAMPLE: Initializing...[0m
+[0;32mI (636) BTDM_INIT: BT controller compile version [f7360be][0m
+[0;32mI (636) BTDM_INIT: Bluetooth MAC: cc:7b:5c:1e:e9:f6[0m
+[0;32mI (636) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (1116) EXAMPLE: ESP_BLE_MESH_PROVISIONER_SET_DEV_UUID_MATCH_COMP_EVT, err_code 0[0m
+[0;32mI (1126) EXAMPLE: BLE Mesh Provisioner initialized[0m
+[0;32mI (1126) gpio: GPIO[4]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (1136) EXAMPLE: ESP_BLE_MESH_PROVISIONER_PROV_ENABLE_COMP_EVT, err_code 0[0m
+[0;32mI (1136) EXAMPLE: ESP_BLE_MESH_PROVISIONER_ADD_LOCAL_APP_KEY_COMP_EVT, err_code 0[0m
+[0;32mI (1146) EXAMPLE: ESP_BLE_MESH_PROVISIONER_BIND_APP_KEY_TO_MODEL_COMP_EVT, err_code 0[0m
+[0;32mI (1156) main_task: Returned from app_main()[0m
+[0;32mI (1166) BUTTON: Button pressed count = 1[0m
+[0;32mI (3976) EXAMPLE: ESP_BLE_MESH_PROVISIONER_RECV_UNPROV_ADV_PKT_EVT[0m
+[0;32mI (3976) EXAMPLE: address: 10061cb5c382, address type: 0, adv type: 3[0m
+[0;32mI (3976) EXAMPLE: device uuid: dddd10061cb5c3820000000000000000[0m
+[0;32mI (3986) EXAMPLE: oob info: 0, bearer: PB-ADV[0m
+[0;32mI (3996) EXAMPLE: PB-ADV link open[0m
+[0;32mI (3996) EXAMPLE: ESP_BLE_MESH_PROVISIONER_ADD_UNPROV_DEV_COMP_EVT, err_code 0[0m
+[0;32mI (6286) EXAMPLE: node index: 0x0, unicast address: 0x05, element num: 3, netkey index: 0x00[0m
+[0;32mI (6286) EXAMPLE: device uuid: dddd10061cb5c3820000000000000000[0m
+[0;32mI (6286) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (6296) EXAMPLE: ESP_BLE_MESH_PROVISIONER_SET_NODE_NAME_COMP_EVT, err_code 0[0m
+[0;32mI (6306) EXAMPLE: Node 0 name is: NODE-0[0m
+[0;32mI (6586) EXAMPLE: PB-ADV link close, reason 0x00[0m
+[0;32mI (6716) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x00, addr: 0x0005, opcode: 0x8008[0m
+[0;32mI (6716) EXAMPLE: composition data e502000000000a0003000000020000000010000001000010000001000010[0m
+[0;32mI (6726) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (7036) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x0000[0m
+[0;32mI (7036) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (7036) EXAMPLE: Sent App Bind to OnOff Server[0m
+[0;32mI (7136) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (7136) EXAMPLE: App Bind success for element 0[0m
+[0;32mI (7136) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (7146) EXAMPLE: Sent App Bind to element 1 (addr 0x0006)[0m
+[0;32mI (7256) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (7256) EXAMPLE: App Bind success for element 1[0m
+[0;32mI (7266) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (7266) EXAMPLE: Sent App Bind to element 2 (addr 0x0007)[0m
+[0;32mI (7376) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (7376) EXAMPLE: App Bind success for element 2[0m
+[0;32mI (7386) EXAMPLE: App Bind completed for node 0x0005[0m
+[0;32mI (11386) BUTTON: Button pressed count = 2[0m
+[0;32mI (11386) BUTTON: Send OFF command[0m
+[0;32mI (11386) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (11396) EXAMPLE: Sent OnOff Set to element addr 0x0005[0m
+[0;32mI (11696) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (11696) EXAMPLE: Sent OnOff Set to element addr 0x0006[0m
+[0;32mI (12006) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (12006) EXAMPLE: Sent OnOff Set to element addr 0x0007[0m
+[0;32mI (24996) EXAMPLE: ESP_BLE_MESH_PROVISIONER_RECV_UNPROV_ADV_PKT_EVT[0m
+[0;32mI (24996) EXAMPLE: address: 10061cb5c382, address type: 0, adv type: 3[0m
+[0;32mI (24996) EXAMPLE: device uuid: dddd10061cb5c3820000000000000000[0m
+[0;32mI (25006) EXAMPLE: oob info: 0, bearer: PB-ADV[0m
+[0;32mI (25016) EXAMPLE: PB-ADV link open[0m
+[0;32mI (25016) EXAMPLE: ESP_BLE_MESH_PROVISIONER_ADD_UNPROV_DEV_COMP_EVT, err_code 0[0m
+[0;32mI (27336) EXAMPLE: node index: 0x0, unicast address: 0x05, element num: 3, netkey index: 0x00[0m
+[0;32mI (27336) EXAMPLE: device uuid: dddd10061cb5c3820000000000000000[0m
+[0;33mW (27336) EXAMPLE: example_ble_mesh_store_node_info: reprovisioned device 0x0005[0m
+[0;32mI (27346) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (27356) EXAMPLE: ESP_BLE_MESH_PROVISIONER_SET_NODE_NAME_COMP_EVT, err_code 0[0m
+[0;32mI (27366) EXAMPLE: Node 0 name is: NODE-0[0m
+[0;32mI (27656) EXAMPLE: PB-ADV link close, reason 0x00[0m
+[0;32mI (27806) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x00, addr: 0x0005, opcode: 0x8008[0m
+[0;32mI (27806) EXAMPLE: composition data e502000000000a0003000000020000000010000001000010000001000010[0m
+[0;32mI (27816) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (28116) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x0000[0m
+[0;32mI (28116) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (28116) EXAMPLE: Sent App Bind to OnOff Server[0m
+[0;32mI (28196) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (28196) EXAMPLE: App Bind success for element 0[0m
+[0;32mI (28206) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (28206) EXAMPLE: Sent App Bind to element 1 (addr 0x0006)[0m
+[0;32mI (28286) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (28286) EXAMPLE: App Bind success for element 1[0m
+[0;32mI (28296) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (28296) EXAMPLE: Sent App Bind to element 2 (addr 0x0007)[0m
+[0;32mI (28446) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (28446) EXAMPLE: App Bind success for element 2[0m
+[0;32mI (28446) EXAMPLE: App Bind completed for node 0x0005[0m
+[0;32mI (45926) BUTTON: Button pressed count = 3[0m
+[0;32mI (45926) BUTTON: Send ON command[0m
+[0;32mI (45926) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (45936) EXAMPLE: Sent OnOff Set to element addr 0x0005[0m
+[0;32mI (46236) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (46236) EXAMPLE: Sent OnOff Set to element addr 0x0006[0m
+[0;32mI (46546) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (46546) EXAMPLE: Sent OnOff Set to element addr 0x0007[0m
+[0;32mI (49266) BUTTON: Button pressed count = 4[0m
+[0;32mI (49266) BUTTON: Send OFF command[0m
+[0;32mI (49266) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (49276) EXAMPLE: Sent OnOff Set to element addr 0x0005[0m
+[0;32mI (49576) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (49576) EXAMPLE: Sent OnOff Set to element addr 0x0006[0m
+[0;32mI (49886) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (49886) EXAMPLE: Sent OnOff Set to element addr 0x0007[0m
+[0;32mI (50316) BUTTON: Button pressed count = 5[0m
+[0;32mI (50316) BUTTON: Send ON command[0m
+[0;32mI (50316) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (50326) EXAMPLE: Sent OnOff Set to element addr 0x0005[0m
+[0;32mI (50626) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (50626) EXAMPLE: Sent OnOff Set to element addr 0x0006[0m
+[0;32mI (50936) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (50936) EXAMPLE: Sent OnOff Set to element addr 0x0007[0m
+[0;32mI (65726) EXAMPLE: ESP_BLE_MESH_PROVISIONER_RECV_UNPROV_ADV_PKT_EVT[0m
+[0;32mI (65726) EXAMPLE: address: 10061cb5c382, address type: 0, adv type: 3[0m
+[0;32mI (65726) EXAMPLE: device uuid: dddd10061cb5c3820000000000000000[0m
+[0;32mI (65736) EXAMPLE: oob info: 0, bearer: PB-ADV[0m
+[0;32mI (65746) EXAMPLE: PB-ADV link open[0m
+[0;32mI (65746) EXAMPLE: ESP_BLE_MESH_PROVISIONER_ADD_UNPROV_DEV_COMP_EVT, err_code 0[0m
+[0;32mI (68206) EXAMPLE: node index: 0x0, unicast address: 0x05, element num: 3, netkey index: 0x00[0m
+[0;32mI (68206) EXAMPLE: device uuid: dddd10061cb5c3820000000000000000[0m
+[0;33mW (68206) EXAMPLE: example_ble_mesh_store_node_info: reprovisioned device 0x0005[0m
+[0;32mI (68216) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (68226) EXAMPLE: ESP_BLE_MESH_PROVISIONER_SET_NODE_NAME_COMP_EVT, err_code 0[0m
+[0;32mI (68226) EXAMPLE: Node 0 name is: NODE-0[0m
+[0;32mI (68476) EXAMPLE: PB-ADV link close, reason 0x00[0m
+[0;32mI (68646) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x00, addr: 0x0005, opcode: 0x8008[0m
+[0;32mI (68646) EXAMPLE: composition data e502000000000a0003000000020000000010000001000010000001000010[0m
+[0;32mI (68656) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (68956) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x0000[0m
+[0;32mI (68956) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (68956) EXAMPLE: Sent App Bind to OnOff Server[0m
+[0;32mI (69066) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (69066) EXAMPLE: App Bind success for element 0[0m
+[0;32mI (69076) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (69076) EXAMPLE: Sent App Bind to element 1 (addr 0x0006)[0m
+[0;32mI (69136) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (69136) EXAMPLE: App Bind success for element 1[0m
+[0;32mI (69146) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (69146) EXAMPLE: Sent App Bind to element 2 (addr 0x0007)[0m
+[0;32mI (69276) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (69276) EXAMPLE: App Bind success for element 2[0m
+[0;32mI (69286) EXAMPLE: App Bind completed for node 0x0005[0m
+[0;32mI (77316) BUTTON: Button pressed count = 6[0m
+[0;32mI (77316) BUTTON: Send OFF command[0m
+[0;32mI (77316) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (77326) EXAMPLE: Sent OnOff Set to element addr 0x0005[0m
+[0;32mI (77626) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (77626) EXAMPLE: Sent OnOff Set to element addr 0x0006[0m
+[0;32mI (77936) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (77936) EXAMPLE: Sent OnOff Set to element addr 0x0007[0m
+[0;32mI (83126) EXAMPLE: ESP_BLE_MESH_PROVISIONER_RECV_UNPROV_ADV_PKT_EVT[0m
+[0;32mI (83126) EXAMPLE: address: 10061cb5c382, address type: 0, adv type: 3[0m
+[0;32mI (83126) EXAMPLE: device uuid: dddd10061cb5c3820000000000000000[0m
+[0;32mI (83136) EXAMPLE: oob info: 0, bearer: PB-ADV[0m
+[0;32mI (83146) EXAMPLE: PB-ADV link open[0m
+[0;32mI (83156) EXAMPLE: ESP_BLE_MESH_PROVISIONER_ADD_UNPROV_DEV_COMP_EVT, err_code 0[0m
+[0;32mI (85466) EXAMPLE: node index: 0x0, unicast address: 0x05, element num: 3, netkey index: 0x00[0m
+[0;32mI (85466) EXAMPLE: device uuid: dddd10061cb5c3820000000000000000[0m
+[0;33mW (85476) EXAMPLE: example_ble_mesh_store_node_info: reprovisioned device 0x0005[0m
+[0;32mI (85486) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (85496) EXAMPLE: ESP_BLE_MESH_PROVISIONER_SET_NODE_NAME_COMP_EVT, err_code 0[0m
+[0;32mI (85496) EXAMPLE: Node 0 name is: NODE-0[0m
+[0;32mI (85766) EXAMPLE: PB-ADV link close, reason 0x00[0m
+[0;32mI (85946) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x00, addr: 0x0005, opcode: 0x8008[0m
+[0;32mI (85946) EXAMPLE: composition data e502000000000a0003000000020000000010000001000010000001000010[0m
+[0;32mI (85956) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (86256) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x0000[0m
+[0;32mI (86256) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (86256) EXAMPLE: Sent App Bind to OnOff Server[0m
+[0;32mI (86376) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (86376) EXAMPLE: App Bind success for element 0[0m
+[0;32mI (86386) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (86386) EXAMPLE: Sent App Bind to element 1 (addr 0x0006)[0m
+[0;32mI (86426) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (86426) EXAMPLE: App Bind success for element 1[0m
+[0;32mI (86436) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (86436) EXAMPLE: Sent App Bind to element 2 (addr 0x0007)[0m
+[0;32mI (86526) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (86526) EXAMPLE: App Bind success for element 2[0m
+[0;32mI (86536) EXAMPLE: App Bind completed for node 0x0005[0m
+[0;32mI (130696) EXAMPLE: ESP_BLE_MESH_PROVISIONER_RECV_UNPROV_ADV_PKT_EVT[0m
+[0;32mI (130696) EXAMPLE: address: 14335c2f9d22, address type: 0, adv type: 3[0m
+[0;32mI (130696) EXAMPLE: device uuid: dddd14335c2f9d22dddddddddddddddd[0m
+[0;32mI (130706) EXAMPLE: oob info: 0, bearer: PB-ADV[0m
+[0;32mI (130716) EXAMPLE: PB-ADV link open[0m
+[0;32mI (130716) EXAMPLE: ESP_BLE_MESH_PROVISIONER_ADD_UNPROV_DEV_COMP_EVT, err_code 0[0m
+[0;32mI (133056) EXAMPLE: node index: 0x1, unicast address: 0x08, element num: 1, netkey index: 0x00[0m
+[0;32mI (133056) EXAMPLE: device uuid: dddd14335c2f9d22dddddddddddddddd[0m
+[0;32mI (133056) EXAMPLE: Sending to 0x0008 with TTL = 3[0m
+[0;32mI (133066) EXAMPLE: ESP_BLE_MESH_PROVISIONER_SET_NODE_NAME_COMP_EVT, err_code 0[0m
+[0;32mI (133076) EXAMPLE: Node 1 name is: NODE-1[0m
+[0;32mI (133356) EXAMPLE: PB-ADV link close, reason 0x00[0m
+[0;32mI (133426) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x00, addr: 0x0008, opcode: 0x8008[0m
+[0;32mI (133426) EXAMPLE: composition data e502000000000a000300000001000000[0m
+[0;32mI (133436) EXAMPLE: Sending to 0x0008 with TTL = 3[0m
+[0;32mI (133786) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x01, addr: 0x0008, opcode: 0x0000[0m
+[0;32mI (133786) EXAMPLE: Sending to 0x0008 with TTL = 3[0m
+[0;32mI (133796) EXAMPLE: Sent App Bind to OnOff Server[0m
+[0;32mI (133896) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x01, addr: 0x0008, opcode: 0x803d[0m
+[0;32mI (133896) EXAMPLE: App Bind success for element 0[0m
+[0;32mI (133906) EXAMPLE: App Bind completed for node 0x0008[0m
+[0;32mI (149866) BUTTON: Button pressed count = 7[0m
+[0;32mI (149866) BUTTON: Send ON command[0m
+[0;32mI (149866) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (149876) EXAMPLE: Sent OnOff Set to element addr 0x0005[0m
+[0;32mI (150176) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (150176) EXAMPLE: Sent OnOff Set to element addr 0x0006[0m
+[0;32mI (150486) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (150486) EXAMPLE: Sent OnOff Set to element addr 0x0007[0m
+[0;32mI (173816) BUTTON: Button pressed count = 8[0m
+[0;32mI (173816) BUTTON: Send OFF command[0m
+[0;32mI (173816) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (173826) EXAMPLE: Sent OnOff Set to element addr 0x0005[0m
+[0;32mI (174126) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (174126) EXAMPLE: Sent OnOff Set to element addr 0x0006[0m
+[0;32mI (174436) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (174436) EXAMPLE: Sent OnOff Set to element addr 0x0007[0m
+[0;32mI (197656) EXAMPLE: ESP_BLE_MESH_PROVISIONER_RECV_UNPROV_ADV_PKT_EVT[0m
+[0;32mI (197656) EXAMPLE: address: 10061cb5c382, address type: 0, adv type: 0[0m
+[0;32mI (197656) EXAMPLE: device uuid: dddd10061cb5c3820000000000000000[0m
+[0;32mI (197666) EXAMPLE: oob info: 0, bearer: PB-GATT[0m
+[0;32mI (197676) EXAMPLE: ESP_BLE_MESH_PROVISIONER_ADD_UNPROV_DEV_COMP_EVT, err_code 0[0m
+[0;32mI (204796) EXAMPLE: PB-GATT link open[0m
+[0;33mW (205706) BT_HCI: hci cmd send: disconnect: hdl 0x0, rsn:0x13[0m
+[0;33mW (205706) BT_APPL: gattc_conn_cb: if=3 st=0 id=3 rsn=0x16[0m
+[0;32mI (205706) EXAMPLE: node index: 0x0, unicast address: 0x05, element num: 3, netkey index: 0x00[0m
+[0;32mI (205716) EXAMPLE: device uuid: dddd10061cb5c3820000000000000000[0m
+[0;33mW (205716) EXAMPLE: example_ble_mesh_store_node_info: reprovisioned device 0x0005[0m
+[0;32mI (205726) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (205736) EXAMPLE: PB-GATT link close, reason 0x16[0m
+[0;32mI (205746) EXAMPLE: ESP_BLE_MESH_PROVISIONER_SET_NODE_NAME_COMP_EVT, err_code 0[0m
+[0;32mI (205746) EXAMPLE: Node 0 name is: NODE-0[0m
+[0;33mW (205816) BT_HCI: hcif disc complete: hdl 0x0, rsn 0x16[0m
+[0;32mI (207266) EXAMPLE: ESP_BLE_MESH_PROVISIONER_RECV_UNPROV_ADV_PKT_EVT[0m
+[0;32mI (207266) EXAMPLE: address: 10061cb5c382, address type: 0, adv type: 3[0m
+[0;32mI (207266) EXAMPLE: device uuid: dddd10061cb5c3820000000000000000[0m
+[0;32mI (207276) EXAMPLE: oob info: 0, bearer: PB-ADV[0m
+[0;32mI (207286) EXAMPLE: PB-ADV link open[0m
+[0;32mI (207286) EXAMPLE: ESP_BLE_MESH_PROVISIONER_ADD_UNPROV_DEV_COMP_EVT, err_code 0[0m
+[0;33mW (209746) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (209746) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8008[0m
+[0;32mI (209756) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;33mW (210036) BLE_MESH: Data for unknown transaction (129 != 0)[0m
+[0;32mI (213566) EXAMPLE: node index: 0x0, unicast address: 0x05, element num: 3, netkey index: 0x00[0m
+[0;32mI (213566) EXAMPLE: device uuid: dddd10061cb5c3820000000000000000[0m
+[0;33mW (213576) EXAMPLE: example_ble_mesh_store_node_info: reprovisioned device 0x0005[0m
+[0;32mI (213586) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;31mE (213586) BLE_MESH: Busy sending message to DST 0x0005[0m
+[0;32mI (213596) EXAMPLE: ESP_BLE_MESH_PROVISIONER_SET_NODE_NAME_COMP_EVT, err_code 0[0m
+[0;32mI (213606) EXAMPLE: Node 0 name is: NODE-0[0m
+[0;32mI (213606) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0xfffffff0, event = 0x00, addr: 0x0005, opcode: 0x8008[0m
+[0;31mE (213616) EXAMPLE: Send config client message failed, opcode 0x8008[0m
+[0;33mW (213776) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (213776) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8008[0m
+[0;32mI (213776) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (213846) EXAMPLE: PB-ADV link close, reason 0x00[0m
+[0;32mI (214026) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x00, addr: 0x0005, opcode: 0x8008[0m
+[0;32mI (214026) EXAMPLE: composition data e502000000000a0003000000020000000010000001000010000001000010[0m
+[0;32mI (214036) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (214336) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x0000[0m
+[0;32mI (214336) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (214336) EXAMPLE: Sent App Bind to OnOff Server[0m
+[0;33mW (214566) BLE_MESH: Replay: src 0x0005 dst 0x0001 seq 0x000003[0m
+[0;33mW (218356) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (218356) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (218366) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;33mW (222376) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (222376) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (222386) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;33mW (226396) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (226396) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (226406) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;33mW (230416) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (230426) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (230426) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;33mW (234446) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (234446) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (234446) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (235016) BUTTON: Button pressed count = 9[0m
+[0;32mI (235016) BUTTON: Send ON command[0m
+[0;32mI (235016) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (235026) EXAMPLE: Sent OnOff Set to element addr 0x0005[0m
+[0;32mI (235326) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (235336) EXAMPLE: Sent OnOff Set to element addr 0x0006[0m
+[0;32mI (235636) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (235636) EXAMPLE: Sent OnOff Set to element addr 0x0007[0m
+[0;33mW (238466) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (238466) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (238476) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;33mW (242486) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (242486) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (242496) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;33mW (246506) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (246516) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (246516) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;33mW (250536) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (250536) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (250536) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;33mW (254556) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (254556) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (254566) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;33mW (258576) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (258576) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (258586) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;33mW (262596) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (262596) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (262606) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;33mW (266616) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (266626) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (266626) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;33mW (270646) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (270646) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (270646) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;33mW (274666) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (274666) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (274676) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;33mW (278686) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (278686) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (278696) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (281766) BUTTON: Button pressed count = 10[0m
+[0;32mI (281766) BUTTON: Send OFF command[0m
+[0;32mI (281766) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (281776) EXAMPLE: Sent OnOff Set to element addr 0x0005[0m
+[0;32mI (282076) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (282076) EXAMPLE: Sent OnOff Set to element addr 0x0006[0m
+[0;32mI (282386) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (282386) EXAMPLE: Sent OnOff Set to element addr 0x0007[0m
+[0;33mW (282706) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (282706) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (282716) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;33mW (286736) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (286736) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (286736) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;33mW (290756) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (290756) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (290766) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (293266) BUTTON: Button pressed count = 11[0m
+[0;32mI (293266) BUTTON: Send ON command[0m
+[0;32mI (293266) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (293276) EXAMPLE: Sent OnOff Set to element addr 0x0005[0m
+[0;32mI (293576) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (293576) EXAMPLE: Sent OnOff Set to element addr 0x0006[0m
+[0;32mI (293886) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (293886) EXAMPLE: Sent OnOff Set to element addr 0x0007[0m
+[0;33mW (294776) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (294776) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (294786) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;33mW (298796) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (298796) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (298806) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;33mW (302816) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (302826) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (302826) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;33mW (306846) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (306846) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (306846) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (306926) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (306926) EXAMPLE: App Bind success for element 0[0m
+[0;32mI (306936) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;32mI (306936) EXAMPLE: Sent App Bind to element 1 (addr 0x0006)[0m
+[0;33mW (310956) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (310956) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (310966) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;33mW (314986) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (314986) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (314986) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;33mW (319006) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (319006) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (319006) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;33mW (323026) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (323026) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (323036) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;33mW (327046) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (327046) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (327056) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;33mW (331066) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (331076) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (331076) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;33mW (335096) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (335096) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (335096) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;33mW (339116) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (339116) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (339126) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;33mW (343136) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (343136) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (343146) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;33mW (347156) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (347156) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (347166) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;33mW (351176) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (351186) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (351186) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;33mW (355206) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (355206) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (355206) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;33mW (359226) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (359226) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (359236) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;33mW (363246) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (363246) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (363256) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;33mW (367266) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (367266) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (367276) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;33mW (371296) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (371296) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (371296) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;33mW (375316) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (375316) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (375316) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;33mW (379336) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (379336) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (379346) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
+[0;33mW (383356) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (383356) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (383366) EXAMPLE: Sending to 0x0005 with TTL = 3[0m
