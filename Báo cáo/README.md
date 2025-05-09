@@ -82,9 +82,9 @@ Cài các tiện ích cần thiết
 - Công cụ: Visual Code, ESP-IDF Terminal.
 - Trong dự án này, mình đang sử dụng 3 ESP-32 để mô phỏng 1 mạng mesh sử dụng BLE. 
 - Trong đó:
-- 1 con ESP làm provisoner đảm nhận nhiệm vụ provisioning và gửi yêu cầu đến server. 
-- 1 con ESP đảm nhận nhiệm vụ làm server( khi cấp nguồn có thể join vào mạng mesh của provisioner và nhận dữ liệu từ provisioner gửi đi khi ở trong tầm truyền của BLE).
-- 1 con ESP có chức năng là Relay Node ( trung chuyển dữ liệu được truyền đi giữa provisioner và server khi 2 con ở cách nhau quá xa, ngoài tầm truyền của BLE).
+	- 1 con ESP làm provisoner đảm nhận nhiệm vụ provisioning và gửi yêu cầu đến server. 
+	- 1 con ESP đảm nhận nhiệm vụ làm server( khi cấp nguồn có thể join vào mạng mesh của provisioner và nhận dữ liệu từ provisioner gửi đi khi ở trong tầm truyền của BLE).
+	- 1 con ESP có chức năng là Relay Node ( trung chuyển dữ liệu được truyền đi giữa provisioner và server khi 2 con ở cách nhau quá xa, ngoài tầm truyền của BLE).
 
 ### Cơ chế truyền dữ liệu của BLE
 Trong mạng **BLE Mesh**, thiết bị **Provisioner** đóng vai trò thiết lập và cấu hình các node khác trong mạng. Sau khi hoàn tất quá trình provisioning và cấu hình model, Provisioner có thể gửi dữ liệu điều khiển (ví dụ: bật/tắt đèn) đến các node đã tham gia mạng. Cơ chế truyền dữ liệu như sau:
@@ -98,15 +98,11 @@ Trong mạng **BLE Mesh**, thiết bị **Provisioner** đóng vai trò thiết 
   - Unicast Address (ví dụ: `0x0005`)
   - Subnet info và AppKey được lưu trữ nội bộ.
 
----
-
 - 2. 🧠 Binding và Cấu Hình Model
 - Provisioner gửi lệnh **AppKey Bind** đến từng **element** cụ thể trong node (ví dụ: `Generic OnOff Server`).
 - Ngoài ra, có thể thiết lập:
   - **Publication** (tự động gửi thông tin đến địa chỉ khác)
   - **Subscription** (chấp nhận nhận dữ liệu từ một địa chỉ)
-
----
 
 - 3. 📤 Truyền Dữ Liệu Ứng Dụng
 - Provisioner sử dụng **Generic OnOff Client Model** để gửi lệnh `OnOff Set` hoặc `OnOff Set Unacknowledged`.
@@ -117,14 +113,10 @@ Trong mạng **BLE Mesh**, thiết bị **Provisioner** đóng vai trò thiết 
   - Network Layer
   - Bearer (GATT hoặc Advertising)
 
----
-
 - 4. 📡 Relay – Truyền qua các nút trung gian
 - Nếu Provisioner không nằm trong phạm vi trực tiếp của một node:
   - Gói tin sẽ được các **Relay Node** chuyển tiếp theo kiểu "store and forward".
   - Mỗi gói có trường `TTL` (Time To Live) để giới hạn số lần relay.
-
----
 
 - 5. 📥 Node Nhận Dữ Liệu
 - Node kiểm tra:
