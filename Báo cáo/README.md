@@ -8,8 +8,8 @@
 - [Danh sách linh kiện](#danh-sách-linh-kiện)
 - [Sơ đồ nguyên lý và PCB](#sơ-đồ-nguyên-lý-và-pcb)
 - [Hướng dẫn lắp ráp](#hướng-dẫn-lắp-ráp)
-- [Lập trình firmware](#lập-trình-firmware)
 - [Cài đặt môi trường](#cài-đặt-môi-trường)
+- [Lập trình firmware](#lập-trình-firmware)
 - [Cách sử dụng](#cách-sử-dụng)
 - [Kiểm thử](#kiểm-thử)
 - [Ảnh/Video demo](#ảnhvideo-demo)
@@ -46,11 +46,6 @@
 
 ## Hướng dẫn lắp ráp ( Không có )
 
-## Lập trình firmware
-
-- Ngôn ngữ: C.
-- Công cụ: Visual Code, ESP-IDF Terminal.
-
 ##  Cài đặt môi trường
 ### Cài đặt Microsoft Visual Studio Code 
 - Truy cập trang chính thức: [Visual studio Code](https://code.visualstudio.com/).
@@ -78,9 +73,75 @@ Cài các tiện ích cần thiết
 ![alt](anh_2.PNG)
 	- Chọn phiên bản mà bạn muốn rồi nhấn down( ở đây mình dùng ver 5.2.5)
 ![alt](anh_3.PNG)
+	- Sau khi tải về hoàn tất tiến hành các bước cài đặt ESP-IDF.
+	- Sau khi cài xong mở **ESP-IDF Command Prompt** để sử dụng.
 
+## Lập trình firmware
 
-		
+- Ngôn ngữ: C.
+- Công cụ: Visual Code, ESP-IDF Terminal.
+- Trong dự án này, mình đang sử dụng 3 ESP-32 để mô phỏng 1 mạng mesh sử dụng BLE. 
+- Trong đó:
+- 1 con ESP làm provisoner đảm nhận nhiệm vụ provisioning và gửi yêu cầu đến server. 
+- 1 con ESP đảm nhận nhiệm vụ làm server( khi cấp nguồn có thể join vào mạng mesh của provisioner và nhận dữ liệu từ provisioner gửi đi khi ở trong tầm truyền của BLE).
+- 1 con ESP có chức năng là Relay Node ( trung chuyển dữ liệu được truyền đi giữa provisioner và server khi 2 con ở cách nhau quá xa, ngoài tầm truyền của BLE).
+
+### Cơ chế truyền dữ liệu của BLE
+Trong mạng **BLE Mesh**, thiết bị **Provisioner** đóng vai trò thiết lập và cấu hình các node khác trong mạng. Sau khi hoàn tất quá trình provisioning và cấu hình model, Provisioner có thể gửi dữ liệu điều khiển (ví dụ: bật/tắt đèn) đến các node đã tham gia mạng. Cơ chế truyền dữ liệu như sau:
+
+- 1. 🔐 Provisioning
+- Provisioner tạo và phân phối các thông tin cần thiết:
+  - `NetKey`: Khóa mạng chia sẻ chung cho toàn bộ mạng Mesh.
+  - `AppKey`: Khóa ứng dụng để mã hóa dữ liệu ứng dụng (ví dụ: bật/tắt).
+  - Địa chỉ Unicast cho từng node.
+- Mỗi node sau khi được provision sẽ có:
+  - Unicast Address (ví dụ: `0x0005`)
+  - Subnet info và AppKey được lưu trữ nội bộ.
+
+---
+
+- 2. 🧠 Binding và Cấu Hình Model
+- Provisioner gửi lệnh **AppKey Bind** đến từng **element** cụ thể trong node (ví dụ: `Generic OnOff Server`).
+- Ngoài ra, có thể thiết lập:
+  - **Publication** (tự động gửi thông tin đến địa chỉ khác)
+  - **Subscription** (chấp nhận nhận dữ liệu từ một địa chỉ)
+
+---
+
+- 3. 📤 Truyền Dữ Liệu Ứng Dụng
+- Provisioner sử dụng **Generic OnOff Client Model** để gửi lệnh `OnOff Set` hoặc `OnOff Set Unacknowledged`.
+- Dữ liệu được truyền qua các tầng của BLE Mesh:
+  - Application Layer (OnOff)
+  - Access Layer
+  - Upper/Lower Transport Layer
+  - Network Layer
+  - Bearer (GATT hoặc Advertising)
+
+---
+
+- 4. 📡 Relay – Truyền qua các nút trung gian
+- Nếu Provisioner không nằm trong phạm vi trực tiếp của một node:
+  - Gói tin sẽ được các **Relay Node** chuyển tiếp theo kiểu "store and forward".
+  - Mỗi gói có trường `TTL` (Time To Live) để giới hạn số lần relay.
+
+---
+
+- 5. 📥 Node Nhận Dữ Liệu
+- Node kiểm tra:
+  - Có `AppKey` hợp lệ không?
+  - Có đang **subscribe** đến địa chỉ gửi?
+  - Có model phù hợp không?
+- Nếu hợp lệ → node thực thi hành động (ví dụ: bật LED).
+
+	
+## Cách sử dụng
+- Mở cái folder **provisoner**, **onoff_server**, **onoff_client**(relay node) ở trong Visual Code.
+- Mở ESP-IDF Terminal:
+- Các lệnh sử dụng trong ESP-IDF Terminal:
++ idf.py build
++ idf.py -p COMx flash nạp code cho ESP-32)
++ idf.py -p COMx monitor: mở cửa sổ monitor để check log).
++ idf.py erase_flash: xóa bộ nhớ flash.
 		
 		
 
