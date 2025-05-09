@@ -51,20 +51,20 @@
 - Ngôn ngữ: C.
 - Công cụ: Visual Code, ESP-IDF Terminal.
 
-	### Bước 1: Cài đặt môi trường
-		 Cài đặt Microsoft Visual Studio Code 
-		- Truy cập trang chính thức: [Visual studio Code](https://code.visualstudio.com/).
-		- Nhấn nút ** Download for Windows** hoặc chọn hệ điều hành khác (macOs, Linux).
+### Bước 1: Cài đặt môi trường
+Cài đặt Microsoft Visual Studio Code 
+- Truy cập trang chính thức: [Visual studio Code](https://code.visualstudio.com/).
+- Nhấn nút ** Download for Windows** hoặc chọn hệ điều hành khác (macOs, Linux).
 		
-		 Cài đặt 
-		- Chạy file .exe vừa tải về.
-		- Tích chọn các tùy chọn cần thiết ( ** Add to PATH**, **Register as default editor**).
-		- Nhấn **Next** và hoàn tất cài đặt.
+Cài đặt 
+- Chạy file .exe vừa tải về.
+- Tích chọn các tùy chọn cần thiết ( ** Add to PATH**, **Register as default editor**).
+- Nhấn **Next** và hoàn tất cài đặt.
 		
-		 Cài các tiện ích cần thiết
-		- **C/C++**
-		- **PlatformIO**
-		- **ESP-IDF** ( Nếu không cài trong Extension thì có thể cài riêng ở ngoài).
+Cài các tiện ích cần thiết
+- **C/C++**
+- **PlatformIO**
+- **ESP-IDF** ( Nếu không cài trong Extension thì có thể cài riêng ở ngoài).
 		
 		
 		
