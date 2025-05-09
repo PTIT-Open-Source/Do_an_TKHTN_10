@@ -72,12 +72,12 @@ Cài các tiện ích cần thiết
 	- **Linux**
 	- **MacOS**
 - Cài đặt ( ở đây đang cài trên Windows)
-- Sau khi vào theo đường link trên, kéo xuống chọn download( ảnh minh họa)
-![alt](anh_1.png)
-- Tiếp đến chọn **Windows Installer Download**
-![alt](anh_2.png)
-- Chọn phiên bản mà bạn muốn rồi nhấn down( ở đây mình dùng ver 5.2.5)
-![alt](anh_3.png)
+	- Sau khi vào theo đường link trên, kéo xuống chọn download( ảnh minh họa)
+![alt](anh_1.PNG)
+	- Tiếp đến chọn **Windows Installer Download**
+![alt](anh_2.PNG)
+	- Chọn phiên bản mà bạn muốn rồi nhấn down( ở đây mình dùng ver 5.2.5)
+![alt](anh_3.PNG)
 
 
 		
