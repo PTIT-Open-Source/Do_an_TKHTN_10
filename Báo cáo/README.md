@@ -155,7 +155,7 @@ Dự án được thực hiện bởi nhóm sinh viên:
 - Tạ Hồng Phúc
 - Đàm Phú Quốc
 - Đặng Anh Tài
-Xin chân thành cảm ơn sự hỗ trợ và hướng dẫn từ giảng viên và nhà trường trong suốt quá trình thực hiện dự án.
+	Xin chân thành cảm ơn sự hỗ trợ và hướng dẫn từ giảng viên và nhà trường trong suốt quá trình thực hiện dự án.
 
 
 
