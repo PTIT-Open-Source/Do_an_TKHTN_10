@@ -132,11 +132,11 @@ Trong mạng **BLE Mesh**, thiết bị **Provisioner** đóng vai trò thiết 
 - Mở các folder **provisoner**, **onoff_server**, **onoff_client**(relay node) ở trong Visual Code.
 - Mở ESP-IDF Terminal:
 - Các lệnh thường được sử dụng trong ESP-IDF Terminal:
-+ idf.py build
-+ idf.py -p COMx flash nạp code cho ESP-32)
-+ idf.py -p COMx monitor: mở cửa sổ monitor để check log).
-+ idf.py erase_flash: xóa bộ nhớ flash.
-+ idf.py fullclean: xóa sạch toàn bộ các tệp build và cấu hình.
+	+ idf.py build
+	+ idf.py -p COMx flash nạp code cho ESP-32)
+	+ idf.py -p COMx monitor: mở cửa sổ monitor để check log).
+	+ idf.py erase_flash: xóa bộ nhớ flash.
+	+ idf.py fullclean: xóa sạch toàn bộ các tệp build và cấu hình.
 
 - Sử dụng lệnh **idf.py -p COMx flash** để nạp code sau đó dùng lệnh **idf.py -p COMx monitor** để theo dõi qua cửa sổ monitor. Khi đó cửa số monotir sẽ hiện ra kết quả như sau:
 	- Cửa sổ monitor của provisioner:
