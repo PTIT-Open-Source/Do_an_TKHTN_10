@@ -84,7 +84,7 @@ Cài các tiện ích cần thiết
 - Trong đó:
 	- 1 con ESP làm provisoner đảm nhận nhiệm vụ provisioning và gửi yêu cầu đến server. 
 	- 1 con ESP đảm nhận nhiệm vụ làm server( khi cấp nguồn có thể join vào mạng mesh của provisioner và nhận dữ liệu từ provisioner gửi đi khi ở trong tầm truyền của BLE).
-	- 1 con ESP có chức năng là Relay Node ( trung chuyển dữ liệu được truyền đi giữa provisioner và server khi 2 con ở cách nhau quá xa, ngoài tầm truyền của BLE).
+	- 1 con ESP có chức năng là Relay Node ( trung chuyển dữ liệu được truyền đi giữa provisioner đến server khi 2 con ở cách nhau quá xa, ngoài tầm truyền của BLE).
 
 ### Cơ chế truyền dữ liệu của BLE
 Trong mạng **BLE Mesh**, thiết bị **Provisioner** đóng vai trò thiết lập và cấu hình các node khác trong mạng. Sau khi hoàn tất quá trình provisioning và cấu hình model, Provisioner có thể gửi dữ liệu điều khiển (ví dụ: bật/tắt đèn) đến các node đã tham gia mạng. Cơ chế truyền dữ liệu như sau:
@@ -127,13 +127,36 @@ Trong mạng **BLE Mesh**, thiết bị **Provisioner** đóng vai trò thiết 
 
 	
 ## Cách sử dụng
-- Mở cái folder **provisoner**, **onoff_server**, **onoff_client**(relay node) ở trong Visual Code.
+- Mở các folder **provisoner**, **onoff_server**, **onoff_client**(relay node) ở trong Visual Code.
 - Mở ESP-IDF Terminal:
-- Các lệnh sử dụng trong ESP-IDF Terminal:
+- Các lệnh thường được sử dụng trong ESP-IDF Terminal:
 + idf.py build
 + idf.py -p COMx flash nạp code cho ESP-32)
 + idf.py -p COMx monitor: mở cửa sổ monitor để check log).
 + idf.py erase_flash: xóa bộ nhớ flash.
-		
++ idf.py fullclean: xóa sạch toàn bộ các tệp build và cấu hình.
+
+- Sử dụng lệnh **idf.py -p COMx flash** để nạp code sau đó dùng lệnh **idf.py -p COMx monitor** để theo dõi qua cửa sổ monitor. Khi đó cửa số monotir sẽ hiện ra kết quả như sau:
+	- Cửa sổ monitor của provisioner:
+	- Cửa sổ monitor của server:
+
+## Ảnh/Video demo
+- Sơ đồ hệ thống:
+- Mô hình hệ thống:
+- Kết quả dữ liệu:
+
+## Đóng góp
+## Giấy phép
+## Tác giả
+Dự án được thực hiện bởi nhóm sinh viên:
+Trần Đức Lương
+Tạ Hồng Phúc
+Đàm Phú Quốc
+Đặng Anh Tài
+Xin chân thành cảm ơn sự hỗ trợ và hướng dẫn từ giảng viên và nhà trường trong suốt quá trình thực hiện dự án.
+
+
+
+	
 		
 
