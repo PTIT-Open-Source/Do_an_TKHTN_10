@@ -144,6 +144,7 @@ Trong mạng **BLE Mesh**, thiết bị **Provisioner** đóng vai trò thiết 
 
 ## Ảnh/Video demo
 - Sơ đồ hệ thống:
+![alt](minh_hoa.PNG)
 - Mô hình hệ thống:
 - Kết quả dữ liệu:
 
