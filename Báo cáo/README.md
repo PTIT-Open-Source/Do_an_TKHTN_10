@@ -153,13 +153,13 @@ Trong mạng **BLE Mesh**, thiết bị **Provisioner** đóng vai trò thiết 
 - Kết quả dữ liệu:
 Provsion các node vào mạng mesh:
 	+ ESP32 provisioner:
-	![alt](provisioner_1.PNG)
+	![alt](provisoner_1.PNG)
 	+ ESP32 node:
 	![alt](node_1.PNG)
 Sau khi ESP32 node join được vào mạng mesh, nhấn button để bắt đầu truyền dữ liệu từ provisioner đến node server:
 	Nếu ở trong phạm vi truyền của provisioner:
 	+ ESP32 provisioner:
-	![alt](provisioner_2.PNG)
+	![alt](provisoner_2.PNG)
 	provisioner sẽ gửi dữ liệu đến node qua các element với giá trị TT5.
 	+ ESP32 node:
 	![alt](node_2.PNG)
