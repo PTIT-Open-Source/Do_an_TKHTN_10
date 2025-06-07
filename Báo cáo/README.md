@@ -161,18 +161,21 @@ Provsion các node vào mạng mesh:
 Sau khi ESP32 node join được vào mạng mesh, nhấn button để bắt đầu truyền dữ liệu từ provisioner đến node server:
 	Nếu ở trong phạm vi truyền của provisioner:
 	+ ESP32 provisioner:
-	![alt](provisoner_2.PNG)
+	
+![alt](provisoner_2.PNG)
 	
 provisioner sẽ gửi dữ liệu đến node qua các element với giá trị TT5.
 
 	+ ESP32 node:
-	![alt](node_2.PNG)
+	
+![alt](node_2.PNG)
 	
 Khi ở trong phạm vi truyền của provisioner thì node sẽ nhận được dữ liệu và bật các chân 25, 26, 27 và TTL sẽ có giá trị = 5(không bị mất qua relay node).
 	Nếu ở ngoài phạm vi truyền của provisoner:
 	
 	+ ESP32 node:
-	![alt](relay_node.PNG)
+	
+![alt](relay_node.PNG)
 Khi truyền qua relay_node, TTL = 4 do đã truyền qua 1 relay_node.
 	
 
